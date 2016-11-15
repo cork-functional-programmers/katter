@@ -11,7 +11,7 @@ During our meetup, we can have some fun connecting up UI implementations to diff
 
 The REST service should support the following 2 endpoints with related JSON structures:
 
-Post a message from a User
+##Post a message from a User
 
 POST HOSTNAME/katter/messsges
 JSON Body
@@ -24,7 +24,7 @@ JSON Body
 ```
 
 the "mentions" property is optional and can be used if you want to add an endpoint to retrieve all mentions of a user.
-Retrieve all messages that were posted by a user
+
 
 JSON Response
 200
@@ -33,6 +33,8 @@ JSON Response
 	"messasgeId": 12
 }
 ```
+
+##Retrieve all messages that were posted by a user
 
 GET HOSTNAME/katter/messages?username="priort"
 JSON Response 200
@@ -52,7 +54,7 @@ JSON Response 200
 }]
 ```
 
-Add any more endpoints you like.
+##Add any more endpoints you like.
 For example and endpoint that gets all messages that a user was mentioned in.
 HOSTNAME/katter/messasges?mentioned="priort"
 
