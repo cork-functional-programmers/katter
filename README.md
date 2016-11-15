@@ -1,8 +1,8 @@
 # katter
 
-This Kata is to create a small service in the FP language and framwork of your choice. There are two REST endpoints to be exposed but feel free to make the service as feature rich as you like!
+This Kata is to create a small service in the FP language and framework of your choice. There are two REST endpoints to be exposed, but feel free to make the service as feature rich as you like!
 
-The service will be a stripped down version of Twitter. It is up to you to go as far with the implementation as you like. This can include a DB or just an in memory store of some sort.
+The service will be a stripped down version of Twitter. It is up to you to go as far with the implementation as you like. This can include a DB or just an in-memory store of some sort.
 
 You can even add a UI if you like, or, you could build solely a UI to consume this REST service in the FP language and framework of your choice. 
 e.g Elm, Clojurescript, Purescript.
@@ -13,7 +13,8 @@ The REST service should support the following 2 endpoints with related JSON stru
 
 ##Post a message from a User
 
-POST HOSTNAME/katter/messsges
+POST HOSTNAME/katter/messages
+
 JSON Body
 ```javascript
 {
@@ -23,11 +24,9 @@ JSON Body
 }
 ```
 
-the "mentions" property is optional and can be used if you want to add an endpoint to retrieve all mentions of a user.
+The "mentions" property is optional and can be used if you want to add an endpoint to retrieve all mentions of a user.
 
-
-JSON Response
-200
+JSON Response 200
 ```javascript
 {
 	"messasgeId": 12
@@ -58,7 +57,7 @@ JSON Response 200
 ##Add any more endpoints you like.
 For example and endpoint that gets all messages that a user was mentioned in.
 
-GET HOSTNAME/katter/messasges?mentioned="priort"
+GET HOSTNAME/katter/messages?mentioned="priort"
 
 JSON Response 200
 ```javascript
@@ -72,5 +71,5 @@ JSON Response 200
 	"mentions": ["priort", "enoonan"]
 }]
 ```
-Or, maybe an endpoint to post a reply to a message from a user.
+Or, maybe, an endpoint to post a reply to a message from a user.
 
