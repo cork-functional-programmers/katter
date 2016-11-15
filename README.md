@@ -37,6 +37,7 @@ JSON Response
 ##Retrieve all messages that were posted by a user
 
 GET HOSTNAME/katter/messages?username="priort"
+
 JSON Response 200
 ```javascript
 [{
@@ -70,4 +71,5 @@ JSON Response 200
 	"mentions": ["priort", "enoonan"]
 }]
 ```
+Or, maybe an endpoint to post a reply to a message from a user.
 
