@@ -57,7 +57,8 @@ JSON Response 200
 
 ##Add any more endpoints you like.
 For example and endpoint that gets all messages that a user was mentioned in.
-HOSTNAME/katter/messasges?mentioned="priort"
+
+GET HOSTNAME/katter/messasges?mentioned="priort"
 
 JSON Response 200
 ```javascript
