@@ -17,41 +17,39 @@ POST HOSTNAME/katter/messsges
 JSON Body
 ```javascript
 {
- "username": "priort",
- "message": "a humorous tweet"
- "mensions": ["jcretel", "dodonovan"] // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
+	"username": "priort",
+	"message": "a humorous tweet",
+	"mentions": ["jcretel", "dodonovan"]
 }
 ```
+
+the "mentions" property is optional and can be used if you want to add an endpoint to retrieve all mentions of a user.
 Retrieve all messages that were posted by a user
 
 JSON Response
 200
 ```javascript
 {
-  "messasgeId" : 12
+	"messasgeId": 12
 }
 ```
 
 GET HOSTNAME/katter/messages?username="priort"
 JSON Response 200
 ```javascript
-[
-{
- "username": "priort",
- "message": "a humorous tweet 1"
- "mensions": ["enoonan"], // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
-},
-{
- "username": "priort",
- "message": "a humorous tweet 2"
- "mensions": ["hmurphy", "jdillon"], // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
-},
-{
- "username": "priort",
- "message": "a humorous tweet 3"
- "mensions": ["bobrien"], // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
-}
-]
+[{
+	"username": "priort",
+	"message": "a humorous tweet 1",
+	"mentions": ["enoonan"]
+}, {
+	"username": "priort",
+	"message": "a humorous tweet 2",
+	"mentions": ["hmurphy", "jdillon"]
+}, {
+	"username": "priort",
+	"message": "a humorous tweet 3",
+	"mentions": ["bobrien"]
+}]
 ```
 
 Add any more endpoints you like.
@@ -60,17 +58,14 @@ HOSTNAME/katter/messasges?mentioned="priort"
 
 JSON Response 200
 ```javascript
-[
-{
- "username": "enoonan",
- "message": "a humorous tweet 1"
- "mensions": ["priort", "bobrien"], // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
-},
-{
- "username": "hmurphy",
- "message": "a humorous tweet 2"
- "mensions": ["priort", "enoonan"], // this is optional to be used if you want to add an endpoint to retrieve all mentions of a username.
-}
-]
+[{
+	"username": "enoonan",
+	"message": "a humorous tweet 1",
+	"mentions": ["priort", "bobrien"]
+}, {
+	"username": "hmurphy",
+	"message": "a humorous tweet 2",
+	"mentions": ["priort", "enoonan"]
+}]
 ```
 
